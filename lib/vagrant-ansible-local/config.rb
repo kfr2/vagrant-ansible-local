@@ -7,6 +7,7 @@ module VagrantPlugins
       attr_accessor :inventory_path
       attr_accessor :ask_sudo_pass
       attr_accessor :limit
+      attr_accessor :privileged
       attr_accessor :sudo
       attr_accessor :sudo_user
       attr_accessor :verbose
@@ -27,6 +28,7 @@ module VagrantPlugins
         @inventory_path    = UNSET_VALUE
         @ask_sudo_pass     = UNSET_VALUE
         @limit             = UNSET_VALUE
+        @privileged        = UNSET_VALUE
         @sudo              = UNSET_VALUE
         @sudo_user         = UNSET_VALUE
         @verbose           = UNSET_VALUE
@@ -46,6 +48,7 @@ module VagrantPlugins
         @inventory_path    = nil if @inventory_path == UNSET_VALUE
         @ask_sudo_pass     = nil if @ask_sudo_pass == UNSET_VALUE
         @limit             = nil if @limit == UNSET_VALUE
+        @privileged        = nil if @privileged == UNSET_VALUE
         @sudo              = nil if @sudo == UNSET_VALUE
         @sudo_user         = nil if @sudo_user == UNSET_VALUE
         @verbose           = nil if @verbose == UNSET_VALUE

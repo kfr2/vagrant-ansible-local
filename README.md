@@ -17,7 +17,11 @@ Your vagrant box should have ansible installed on it, if it's not the case you c
 Configure your VagrantFile with the `ansibleLocal` provisioner:
 
     config.vm.provision :ansibleLocal, :playbook => "ansible/ansible.yml"
-    
+
+You can run ansible as the vagrant user (rather than as root) by setting `privileged` to false:
+
+    config.vm.provision :ansibleLocal, :playbook => "ansible/ansible.yml", :privileged => false
+
 In case your ansible version is between 1.5 and 1.8 and you are running into an error message saying `ERROR: provided hosts list is empty`, you can either add anything to your `/etc/ansible/hosts` file or change the configuration of the provisioner:
 
     config.vm.provision :ansibleLocal, :playbook => "playbooks/playbook.yml", :raw_arguments => "-i 'localhost,'"
