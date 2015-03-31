@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vagrant-ansible-local/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vagrant-ansible-local"
+  spec.name          = "vagrant-ansible-local-privileged"
   spec.version       = Vagrant::AnsibleLocal::VERSION
-  spec.authors       = ["jaugustin"]
-  spec.email         = ["jeremie.augustin@pixel-cookers.com"]
+  spec.authors       = ["kfr2"]
+  spec.email         = ["kevin.f.richardson@gmail.com"]
   spec.description   = %q{"vagrant plugin to provision VM with ansible in local mode"}
   spec.summary       = %q{"vagrant plugin to provision VM with ansible in local mode"}
   spec.homepage      = ""
